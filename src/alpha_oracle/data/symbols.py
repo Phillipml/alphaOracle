@@ -1,5 +1,5 @@
 BR_SYMBOLS = {
-    "indices": [
+    "indexes": [
         "^BVSP",  # IBOVESPA
     ],
     "blue_chips": [
@@ -14,7 +14,7 @@ BR_SYMBOLS = {
         "RAIL3.SA",  # Rumo (logística)
         "ELET3.SA",  # Eletrobras
     ],
-    "diversificacao": [
+    "diversification": [
         "MGLU3.SA",  # Varejo/Magazine
         "VIVT3.SA",  # Telecom
         "CSNA3.SA",  # Siderurgia
@@ -24,5 +24,5 @@ BR_SYMBOLS = {
     ],
 }
 ALL_BR_SYMBOLS = (
-    BR_SYMBOLS["indices"] + BR_SYMBOLS["blue_chips"] + BR_SYMBOLS["diversificacao"]
+    BR_SYMBOLS["indexes"] + BR_SYMBOLS["blue_chips"] + BR_SYMBOLS["diversification"]
 )
