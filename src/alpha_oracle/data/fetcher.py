@@ -1,6 +1,7 @@
 import yfinance as yf
 import pandas as pd
 from typing import List, Union
+from .storage import save_data
 
 
 def fetch_market_data(
@@ -39,3 +40,15 @@ def fetch_market_data(
     except Exception as e:
         print(f"Erro ao buscar dados de mercado: {e}")
         return pd.DataFrame()
+
+def fetch_and_save(
+    symbols: Union[str, List[str]],
+    start:str,
+    end:str,
+    output_path: str
+) -> pd.DataFrame:
+
+    df = fetch_market_data(symbols, start, end)
+    if not df.empty:
+        save_data(df, output_path)
+    return df
