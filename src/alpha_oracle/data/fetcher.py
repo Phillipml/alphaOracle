@@ -26,7 +26,7 @@ def fetch_market_data(
 
         if data.empty:
             print(
-                f"Aviso: Nenhum dado enconytrado para {symbols} no período de {start} e {end}"
+                f"Aviso: Nenhum dado encontrado para {symbols} no período de {start} e {end}"
             )
 
             return pd.DataFrame()
